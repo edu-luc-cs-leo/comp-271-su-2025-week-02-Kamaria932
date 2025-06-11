@@ -191,6 +191,25 @@ public class MinHeap {
      * THIS IS YOUR ASSIGNMENT
      */
     private void heapifyUp() {
+         int child = this.usage - 1; // Look for the new node. Original value/last index in the array.
+/*while loop might be best to keep checking if the child is smaller than the parent because a MinHeap is a completed binary tree.
+Keep swaping the child making sure the parent is always less than or equal to its children
+A binary tree needs all levels to be filled except for the last level and most nodes are on the left side.*/
+
+//If it is smaller, you swap child and parent. Now the parent slot holds the smaller value, and the child slot holds the larger one.
+    while (child > 0 //This child has a parent.
+        && this.underlying[child] < this.underlying[(child - 1) / 2]) {
+
+        int parent = (child - 1) / 2; //child-1/2 refers to the parent's spot.
+/* Swapping statements. Compare the parent and childs value. 
+If this node’s value is smaller than its parent’s, swap them, move the smaller child value up into the parent position. Then move the larger parent value down into the child’s old slot.
+If the child is larger than the parent than place the child in the parents old position.*/
+        int temp = this.underlying[parent];
+        this.underlying[parent] = this.underlying[child];
+        this.underlying[child] = temp;
+
+        child = parent;
+        }
     } // method heapifyUp
 
     /**
