@@ -1,4 +1,4 @@
-## Reflection on Week-00 Assignment 
+## Reflection on Week-00 & Week-01 Assignment 
 **What went well:**
 I changed the return type to Interger from Int. An empty array will have a null value and not crash the testing. My getSmallest() method has a single return type and it follows the programmer pact rules. My code compliles, it is written cleanly, no break or continue statements, and no magic numbers. My code had a lot of comments especitally when I had to explain a big chunk of code.
 **What looks different:**
